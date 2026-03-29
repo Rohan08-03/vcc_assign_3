@@ -4,13 +4,13 @@
 
 ![Architecture](architecture_diagram_autoscale.png)
 
-## 📋 Overview
+## Overview
 
 This project implements a hybrid cloud auto-scaling system that monitors a local VirtualBox VM and automatically provisions resources on Google Cloud Platform when CPU usage exceeds 75%. It demonstrates cloud bursting capabilities, allowing cost-effective local infrastructure with on-demand cloud scaling.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 **Components:**
 - **Local VM**: VirtualBox VM running Ubuntu Server (vm-gateway)
@@ -26,7 +26,7 @@ This project implements a hybrid cloud auto-scaling system that monitors a local
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ gcloud compute firewall-rules create allow-node-app \
 
 ---
 
-## 📝 Usage
+## Usage
 
 ### Run the Monitoring Script
 
@@ -108,7 +108,7 @@ curl http://EXTERNAL_IP:3000
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 gcp-monitoring/
@@ -121,7 +121,7 @@ gcp-monitoring/
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 Edit `monitor.py` to customize:
 
@@ -136,24 +136,24 @@ CHECK_INTERVAL = 10                 # Check frequency (seconds)
 
 ---
 
-## 📊 Monitoring Output
+## Monitoring Output
 
 ```
-🔍 Monitoring VirtualBox VM: vm-gateway
-📊 CPU Threshold: 75%
+Monitoring VirtualBox VM: vm-gateway
+CPU Threshold: 75%
 ------------------------------------------------------------
 [19:39:24] Check #1 - VM CPU: 0.0% ✓
 [19:39:34] Check #2 - VM CPU: 0.2% ✓
 [19:39:44] Check #3 - VM CPU: 8.8% ✓
-[19:39:54] Check #4 - VM CPU: 24.7% ⚠️ THRESHOLD EXCEEDED!
+[19:39:54] Check #4 - VM CPU: 24.7% THRESHOLD EXCEEDED!
 
-🚀 THRESHOLD EXCEEDED! Creating GCP VM...
-✅ GCP VM created successfully!
+THRESHOLD EXCEEDED! Creating GCP VM...
+GCP VM created successfully!
 ```
 
 ---
 
-## 🌐 Deployed Application
+## Deployed Application
 
 Once the GCP VM is created, a Node.js application is automatically deployed:
 
@@ -208,23 +208,6 @@ http://EXTERNAL_IP:3000
 ## 📄 License
 
 Educational project - MIT License
-
----
-
-## 👤 Author
-
-**Your Name**  
-Assignment: Virtualization and Cloud Computing  
-Date: March 2026
-
----
-
-## 🔗 References
-
-- [VirtualBox Documentation](https://www.virtualbox.org/manual/)
-- [Google Cloud Compute Engine](https://cloud.google.com/compute/docs)
-- [gcloud CLI Reference](https://cloud.google.com/sdk/gcloud/reference)
-- [psutil Documentation](https://psutil.readthedocs.io/)
 
 ---
 
