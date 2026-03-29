@@ -174,7 +174,7 @@ http://EXTERNAL_IP:3000
 
 ---
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
@@ -186,7 +186,7 @@ http://EXTERNAL_IP:3000
 
 ---
 
-## 📚 Technical Details
+## Technical Details
 
 **VBoxManage Metrics:**
 - Uses `VBoxManage metrics query` to read VM CPU usage
